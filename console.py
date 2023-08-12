@@ -73,3 +73,7 @@ class HBNBCommand(cmd.Cmd):
                     return argdict[command[0]](call)
         print("*** Unknown syntax: {}".format(arg))
         return False
+
+    def do_quit(self, arg):
+        """Quit command to exit the program."""
+        return True
