@@ -20,9 +20,9 @@ def parse(arg):
         if my_brackets is None:
             return [i.strip(",") for i in split(arg)]
         else:
-            lexer = split(arg[:brackets.span()[0]])
+            lexer = split(arg[:my_brackets.span()[0]])
             retl = [i.strip(",") for i in lexer]
-            retl.append(brackets.group())
+            retl.append(my_brackets.group())
             return retl
     else:
         lexer = split(arg[:my_curly_braces.span()[0]])
