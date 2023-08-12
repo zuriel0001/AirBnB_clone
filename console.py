@@ -147,3 +147,13 @@ class HBNBCommand(cmd.Cmd):
                 elif len(argl) == 0:
                     objl.append(obj.__str__())
             print(objl)
+
+    def do_count(self, arg):
+        """Usage: count <class> or <class>.count()
+        Function that retrieves the number of instances of a given class."""
+        argl = parse(arg)
+        my_count = 0
+        for obj in storage.all().values():
+            if argl[0] == obj.__class__.__name__:
+                my_count += 1
+        print(my_count)
