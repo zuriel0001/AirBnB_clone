@@ -48,3 +48,7 @@ class HBNBCommand(cmd.Cmd):
         "Amenity",
         "Review"
     }
+
+    def emptyline(self):
+        """Pass upon receiving an empty line."""
+        pass
