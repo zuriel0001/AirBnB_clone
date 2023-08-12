@@ -29,3 +29,22 @@ def parse(arg):
         retl = [i.strip(",") for i in lexer]
         retl.append(my_curly_braces.group())
         return retl
+
+
+class HBNBCommand(cmd.Cmd):
+    """Class that defines the HolbertonBnB command interpreter.
+
+    Attributes:
+        prompt (str): The command prompt.
+    """
+
+    prompt = "(hbnb) "
+    __classes = {
+        "BaseModel",
+        "User",
+        "State",
+        "City",
+        "Place",
+        "Amenity",
+        "Review"
+    }
